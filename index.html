@@ -29,11 +29,33 @@
       line-height: 1.8;
     }
 
+    .brand {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100%;
+      height: auto;
+      margin-bottom: 12px;
+    }
+
+    .logo-link {
+      display: block;
+    }
+
+    .logo-link:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .logo-link:active {
+      transform: scale(0.96);
+    }
+
     .title {
       font-weight: bold;
       color: #ffffff;
-      text-decoration: none;
-      display: inline-block;
       letter-spacing: 1px;
     }
 
@@ -49,10 +71,17 @@
   <div class="wrapper">
 
     <div class="container">
-      <a href="https://play.google.com/store/apps/dev?id=5488493026052360473" class="title">
-        Napp Labs
-      </a>
+
+      <div class="brand">
+        <a href="https://play.google.com/store/apps/dev?id=5488493026052360473" class="logo-link">
+          <img src="logo.png" alt="Napp Labs Logo" class="logo">
+        </a>
+
+        <div class="title">Napp Labs</div>
+      </div>
+
       <div>Minimal apps, thoughtfully built.</div>
+
     </div>
 
     <div class="footer" id="copyright"></div>

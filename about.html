@@ -37,28 +37,41 @@
       padding: 40px 24px;
       box-sizing: border-box;
       text-align: center;
+      line-height: 1.8;
     }
 
     .title {
       color: #ffffff;
       font-weight: bold;
+      margin-bottom: 28px;
       letter-spacing: 1px;
       font-size: 16px;
-      margin-bottom: 28px;
     }
 
     .contact {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      max-width: 620px;
       font-size: 16px;
-      line-height: 1.8;
+      max-width: 620px;
     }
 
-    .email,
-    .company,
-    .address {
+    a {
+      color: #808080;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #808080;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #808080;
+      text-decoration: none;
+    }
+
+    .email {
       user-select: text;
       -webkit-user-select: text;
       cursor: text;
@@ -68,14 +81,15 @@
       color: #ffffff;
       font-weight: bold;
       letter-spacing: 1px;
+      user-select: text;
+      -webkit-user-select: text;
+      cursor: text;
     }
 
-    a,
-    a:visited,
-    a:hover,
-    a:active {
-      color: #808080;
-      text-decoration: none;
+    .address {
+      user-select: text;
+      -webkit-user-select: text;
+      cursor: text;
     }
 
     .back {
@@ -114,19 +128,10 @@
       </div>
 
       <div class="address">
-        Krl Road, Maradu
-      </div>
-
-      <div class="address">
-        Ernakulam
-      </div>
-
-      <div class="address">
-        Kerala 
-      </div>
-
-      <div class="address">
-        India 682304
+        Krl Road, Maradu<br>
+        Ernakulam<br>
+        Kerala 682304<br>
+        India
       </div>
 
     </div>

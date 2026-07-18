@@ -166,19 +166,25 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
     left: 0;
 }
 
-.drawer-header {
+.header-brand {
     display: flex;
     align-items: center;
 
-    padding: 10px;
+    gap: 6px;
 
-    gap: 32px;
+    color: white;
 
-    border-bottom: 1px solid #222;
+    font-weight: 400;
+
+    letter-spacing: 0px;
+
+    text-decoration: none;
 }
-.drawer-logo {
+
+.header-logo {
     width: 28px;
     height: 28px;
+
     border-radius: 6px;
 }
 
@@ -225,28 +231,32 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
 
 <body>
 
-  <div class="drawer-header">
+<div id="drawer" class="drawer">
 
-    <div class="menu" onclick="toggleDrawer()">
-        <span class="material-symbols-outlined">
-            menu
-        </span>
+    <div class="drawer-header">
+
+        <div class="menu" onclick="toggleDrawer()">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </div>
+
+        <a href="https://play.google.com/store/apps/dev?id=5488493026052360473"
+           class="header-brand">
+
+            <img src="favicon.png"
+                 alt="Napp Labs"
+                 class="header-logo">
+
+            <span>Napp Labs</span>
+
+        </a>
+
     </div>
 
-    <a href="https://play.google.com/store/apps/dev?id=5488493026052360473"
-       class="header-brand">
-
-        <img src="favicon.png"
-             alt="Napp Labs"
-             class="header-logo">
-
-        <span>Napp Labs</span>
-
+    <a href="about.html">
+        About
     </a>
-
-</div>
-
-    <a href="about.html">About</a>
 
     <a href="mailto:joseantony@napptechlabs.com">
         Contact

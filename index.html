@@ -159,12 +159,26 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
 }
 
 .drawer-header {
-    color: white;
-    font-size: 20px;
+    display: flex;
+    align-items: center;
 
-    padding: 24px;
+    gap: 6px;
+
+    color: white;
+
+    padding: 20px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.25px;
 
     border-bottom: 1px solid #222;
+}
+
+.drawer-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
 }
 
 .drawer a {
@@ -213,8 +227,14 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
   <div id="drawer" class="drawer">
 
     <div class="drawer-header">
-        Napp Labs
-    </div>
+
+    <img src="favicon.png"
+         alt="Napp Labs"
+         class="drawer-logo">
+
+    <span>Napp Labs</span>
+
+</div>
 
     <a href="about.html">About</a>
 

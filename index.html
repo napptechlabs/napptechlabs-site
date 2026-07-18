@@ -162,19 +162,12 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
     display: flex;
     align-items: center;
 
-    gap: 6px;
+    padding: 10px;
 
-    color: white;
-
-    padding: 20px;
-
-    font-weight: 400;
-
-    letter-spacing: 0.25px;
+    gap: 32px;
 
     border-bottom: 1px solid #222;
 }
-
 .drawer-logo {
     width: 28px;
     height: 28px;
@@ -224,15 +217,24 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
 
 <body>
 
-  <div id="drawer" class="drawer">
+  <div class="drawer-header">
 
-    <div class="drawer-header">
+    <div class="menu" onclick="toggleDrawer()">
+        <span class="material-symbols-outlined">
+            menu
+        </span>
+    </div>
 
-    <img src="favicon.png"
-         alt="Napp Labs"
-         class="drawer-logo">
+    <a href="https://play.google.com/store/apps/dev?id=5488493026052360473"
+       class="header-brand">
 
-    <span>Napp Labs</span>
+        <img src="favicon.png"
+             alt="Napp Labs"
+             class="header-logo">
+
+        <span>Napp Labs</span>
+
+    </a>
 
 </div>
 

@@ -12,8 +12,11 @@
     gtag('config', 'G-4FB20SQX5B');
   </script>
 
-  <title>About</title>
+  <title>Napp Labs</title>
   <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 
   <style>
 
@@ -29,88 +32,212 @@
     }
 
     .wrapper {
-      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      gap: 32px;
+    }
+
+    .menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 10px;
+}
+.material-symbols-outlined {
+    display: block;
+
+    color: white;
+    font-size: 24px;
+
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 300,
+      'GRAD' 0,
+      'opsz' 24;
+}
+    .drawer-header {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    color: white;
+      font-size: 18px;
+
+    padding: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.25px;
+
+}
+
+.drawer-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+}
+
+    .container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 40px 24px;
-      box-sizing: border-box;
+      flex: 1;
       text-align: center;
-      line-height: 1.8;
+    }
+
+    .brand {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(-20px);
+    }
+
+    .logo {
+
+    max-width: 120px;
+
+    width: 100%;
+
+    height: auto;
+
+    border: 1px solid #222222;
+
+    border-radius: 20px;
+
+    padding: 8px;
+
+}
+
+    .logo-link {
+      display: block;
+    }
+
+    .logo-link:hover {
+      cursor: pointer;
+    }
+
+    .logo-link:active {
+      transform: scale(0.96);
     }
 
     .title {
-      color: #ffffff;
-      font-weight: bold;
-      margin-bottom: 28px;
-      letter-spacing: 1px;
-      font-size: 16px;
+      margin-top: 12px;
+      color: #666666;
+      font-weight: normal;
+      letter-spacing: 0px;
     }
 
-    .contact {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      font-size: 16px;
-      max-width: 620px;
+    .footer {
+      font-size: 12px;
+      color: #666666;
+      margin-bottom: 10px;
+      text-align: center;
     }
+
+    .drawer {
+    position: fixed;
+
+    top: 0;
+    left: -260px;
+
+    width: 240px;
+    height: 100%;
+
+    background: black;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: left 0.3s ease;
+
+    z-index: 1000;
+}
+
+.drawer.open {
+    left: 0;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: white;
+
+  font-size: 18px;
+
+    font-weight: 400;
+
+    letter-spacing: 0px;
+
+    text-decoration: none;
+}
+
+.header-logo {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 6px;
+}
+
+    .drawer > a:first-of-type {
+
+    margin-top: 12px;
+
+}
+
+.drawer > a {
+    color: #808080;
+
+    padding-top: 14px;
+
+    padding-bottom: 14px;
+
+    padding-left: 24px;
+
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+.drawer a:hover {
+    color: white;
+}
+
+.overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+
+    display: none;
+
+    z-index: 999;
+}
+
+.overlay.open {
+    display: block;
+}
 
     a {
-      color: #808080;
+      color: inherit;
       text-decoration: none;
     }
-
-    a:visited {
-      color: #808080;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #808080;
-      text-decoration: none;
-    }
-
-    .email {
-      user-select: text;
-      -webkit-user-select: text;
-      cursor: text;
-    }
-
-    .company {
-      color: #ffffff;
-      font-weight: bold;
-      letter-spacing: 1px;
-      user-select: text;
-      -webkit-user-select: text;
-      cursor: text;
-    }
-
-    .address {
-      user-select: text;
-      -webkit-user-select: text;
-      cursor: text;
-    }
-
-    .back {
-
-  margin-top: 40px;
-
-  font-size: 16px;
-
-}
-
-.back a,
-
-.back a:visited,
-
-.back a:hover {
-
-  color: #ffffff;
-
-  text-decoration: none;
-
-}
 
   </style>
 
@@ -118,47 +245,139 @@
 
 <body>
 
-  <div class="wrapper">
+<div id="drawer" class="drawer">
 
-    <div class="title">
-      About
+    <div class="drawer-header">
+
+        <div class="menu" onclick="toggleDrawer()">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </div>
+
+        <a href="https://play.google.com/store/apps/dev?id=5488493026052360473"
+           class="header-brand">
+
+            <img src="logo.png"
+                 alt="Napp Labs"
+                 class="header-logo">
+
+            <span>Napp Labs</span>
+
+        </a>
+
     </div>
 
-    <div class="contact">
+    <a href="about.html">
+        About
+    </a>
 
-      <div>
-        Napp Labs is developed with the purpose of building minimalist and thoughtful apps.
-      </div>
+    <a href="contact.html">
+        Contact
+    </a>
 
-      <div>
-         <br>
-        For queries, contact <br>
-      </div>
+    <a href="privacy.html">
+        Privacy Policy
+    </a>
 
-      <div class="email">
-        support@napptechlabs.com <br>
-        <br>
-      </div>
+    <a href="terms.html">
+        Terms of Use
+    </a>
 
-      <div class="company">
-        Napp Labs
-      </div>
+</div>
 
-      <div class="address">
+<div id="overlay" class="overlay"></div>
+
+  <div class="wrapper">
+
+    <header>
+
+      <div class="menu" onclick="toggleDrawer()">
+  <span class="material-symbols-outlined">
+    menu
+  </span>
+</div>
+
+      <a href="https://play.google.com/store/apps/dev?id=5488493026052360473"
+
+   class="header-brand">
+        <img src="logo.png"
+             alt="Napp Labs"
+             class="header-logo">
+        <span>Napp Labs</span>
+      </a>
+
+    </header>
+
+    <div class="container">
+
+        <div class="title">
+           Contact
+        </div>
+      <div class="content">
+
+    <h1>Contact</h1>
+
+    <p>
+        support@napptechlabs.com
+    </p>
+
+    <br>
+
+    <p>
+        Napp Labs<br>
         Nedunilath House<br>
         Krl Road, Maradu<br>
         Ernakulam<br>
-        Kerala <br>
+        Kerala<br>
         India 682304
-      </div>
+    </p>
+
+</div>
+ 
 
     </div>
 
-    <div class="back">
-      <a href="index.html">Back</a>
-    </div>
+    <div class="footer" id="copyright"></div>
 
   </div>
 
+  <script>
+    document.getElementById("copyright").textContent =
+      "© " + new Date().getFullYear() + " Napp Labs";
+  </script>
+
+<script>
+
+function toggleDrawer() {
+
+    document
+        .getElementById("drawer")
+        .classList
+        .toggle("open");
+
+    document
+        .getElementById("overlay")
+        .classList
+        .toggle("open");
+}
+
+document
+    .getElementById("overlay")
+    .addEventListener("click", () => {
+
+        document
+            .getElementById("drawer")
+            .classList
+            .remove("open");
+
+        document
+            .getElementById("overlay")
+            .classList
+            .remove("open");
+});
+
+</script>
+  
 </body>
 </html>

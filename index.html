@@ -49,8 +49,7 @@
   <style>
 
     body {
-      background: black;
-      overflow: hidden;
+      background-color: black;
       color: #808080;
       font-family: "Roboto", sans-serif;
       margin: 0;
@@ -60,77 +59,10 @@
       caret-color: transparent;
     }
 
-     body::before {
-
-    content: "";
-
-    position: fixed;
-
-    inset: -25%;
-
-    background:
-
-        radial-gradient(
-            circle at 10% 30%,
-            rgba(0,255,100,0.15),
-            transparent 35%
-        ),
-
-        radial-gradient(
-            circle at 85% 40%,
-            rgba(0,100,255,0.18),
-            transparent 40%
-        ),
-
-        radial-gradient(
-            circle at 20% 90%,
-            rgba(255,200,0,0.15),
-            transparent 35%
-        ),
-
-        radial-gradient(
-            circle at 50% 95%,
-            rgba(255,0,0,0.10),
-            transparent 30%
-        );
-
-    filter: blur(70px);
-
-    animation:
-        backgroundMove 30s ease-in-out infinite alternate;
-
-    z-index: -2;
-
-    pointer-events: none;
-}
-     body::after {
-
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    background:
-        radial-gradient(
-            circle,
-            transparent 20%,
-            rgba(0,0,0,0.6) 70%,
-            rgba(0,0,0,0.9) 100%
-        );
-
-    z-index: -1;
-
-    pointer-events: none;
-}
-
     .wrapper {
       display: flex;
       flex-direction: column;
       height: 100dvh;
-       position: relative;
-
-    z-index: 1;
     }
 
     header {
@@ -328,28 +260,6 @@
 
 .overlay.open {
     display: block;
-}
-
-     @keyframes backgroundMove {
-
-    from {
-
-        transform:
-            translateX(-40px)
-            translateY(-20px)
-            scale(1);
-
-    }
-
-    to {
-
-        transform:
-            translateX(40px)
-            translateY(20px)
-            scale(1.1);
-
-    }
-
 }
 
     a {

@@ -59,6 +59,42 @@
       caret-color: transparent;
     }
 
+     body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0,102,255,0.10),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(127,90,240,0.08),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            circle at 50% 80%,
+            rgba(0,201,167,0.06),
+            transparent 40%
+        );
+
+    animation:
+        aurora 25s ease-in-out infinite alternate;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
     .wrapper {
       display: flex;
       flex-direction: column;
@@ -260,6 +296,26 @@
 
 .overlay.open {
     display: block;
+}
+
+     @keyframes aurora {
+
+    from {
+
+        transform:
+            translateX(-50px)
+            translateY(-20px);
+
+    }
+
+    to {
+
+        transform:
+            translateX(50px)
+            translateY(20px);
+
+    }
+
 }
 
     a {

@@ -124,6 +124,13 @@
       text-align: center;
     }
 
+     .apps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
     .brand {
       display: inline-flex;
       flex-direction: column;
@@ -347,23 +354,44 @@
 
     <div class="container">
 
-      <div class="brand">
+      <div class="apps">
 
-        <a href="https://play.google.com/store/apps/details?id=com.napp.tapp"
-           class="logo-link">
+  <div class="brand">
 
-          <img src="tapp.png"
-               alt="Tapp Logo"
-               class="logo">
+    <a href="https://play.google.com/store/apps/details?id=com.napp.gapp"
+       class="logo-link">
 
-        </a>
+      <img src="gapp.png"
+           alt="Gapp Logo"
+           class="logo">
 
-        <div class="title">
-           Tapp
-        </div>
+    </a>
 
-      </div>
+    <div class="title">
+       Gapp
+    </div>
 
+  </div>
+
+
+  <div class="brand">
+
+    <a href="https://play.google.com/store/apps/details?id=com.napp.tapp"
+       class="logo-link">
+
+      <img src="tapp.png"
+           alt="Tapp Logo"
+           class="logo">
+
+    </a>
+
+    <div class="title">
+       Tapp
+    </div>
+
+  </div>
+
+</div>
     </div>
 
     <div class="footer" id="copyright"></div>

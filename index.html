@@ -125,10 +125,13 @@
     }
 
      .apps {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 24px;
 }
 
     .brand {
@@ -152,6 +155,16 @@
 
     padding: 8px;
 
+}
+
+     @media (max-width: 480px) {
+    .apps {
+        gap: 20px;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
 }
 
     .logo-link {

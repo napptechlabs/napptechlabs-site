@@ -8,97 +8,98 @@
 
     <style>
         body {
-            font-family: Roboto, Arial, sans-serif;
-            background-color: #000;
+            font-family: "Roboto", sans-serif;
+            background-color: #000000;
             color: #808080;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100dvh;
+            margin: 0;
+        }
+
+        .content {
             max-width: 800px;
-            margin: 0 auto;
             padding: 24px;
             line-height: 1.6;
         }
 
-        h1, h2 {
-            color: #fff;
-        }
-
-        h1 {
-            margin-bottom: 24px;
-        }
-
-        h2 {
-            font-size: 18px;
-            margin-top: 24px;
-        }
-
-        p {
+        .section {
             margin-bottom: 18px;
         }
 
-        a {
-            color: #fff;
+        .label {
+            color: #808080;
+        }
+
+        .value {
+            color: #FFFFFF;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>HAPP Account Deletion</h1>
+<div class="content">
 
-    <p><strong>Last updated: November 2026</strong></p>
+    <div class="value">
+        Happ Account Deletion
+    </div>
+    <br>
 
-    <p>HAPP is developed by Napp Labs.</p>
+    <div class="section">
+        <span class="label">Last updated:</span>
+        <span class="value">November 2026</span>
+    </div>
 
-    <p>
-        If you would like to permanently delete your HAPP account
-        and associated data, please email:
-    </p>
+    <div class="section">
+        Happ is developed by <span class="value">Napp Labs</span>.
+    </div>
 
-    <p>
-        <strong>
-            <a href="mailto:support@napptechlabs.com">
-                support@napptechlabs.com
-            </a>
-        </strong>
-    </p>
+    <div class="section">
+        If you would like to permanently delete your Happ account and associated data, please email:
+    </div>
 
-    <p><strong>Subject:</strong> Delete HAPP Account</p>
+    <div class="value">
+        support@napptechlabs.com
+    </div>
 
-    <p>
-        Please include your HAPP account email address so that
-        we can identify your account.
-    </p>
+    <br>
 
-    <h2>The following data will be deleted:</h2>
+    <div class="section">
+        <span class="label">Subject:</span>
+        <span class="value">Delete Happ Account</span>
+    </div>
 
-    <p>
-        → HAPP account<br>
-        → Google Sign-In account association<br>
-        → Display name and user profile information<br>
+    <div class="section">
+        Please include the email address associated with your Happ account in your request so that we can identify your account.
+    </div>
+
+    <div class="section">
+        <span class="label">The following data will be deleted:</span><br>
+        → Happ account<br>
+        → Google Sign-In association<br>
+        → Account information and profile data<br>
         → Recent interaction records<br>
-        → Room presence and associated signalling data
-    </p>
+        → Room presence and signalling data
+    </div>
 
-    <h2>Data retention:</h2>
+    <div class="section">
+        <span class="label">Data retention:</span><br>
+        Once your identity has been verified, your account and associated data will be permanently deleted. Data may be retained only where required by applicable law or for legitimate security purposes, after which it will also be deleted.
+    </div>
 
-    <p>
-        Once your identity has been verified, your account and
-        associated data will be permanently deleted. Data may
-        be retained only where required by applicable law or
-        for legitimate security purposes, after which it will
-        also be deleted.
-    </p>
-
-    <p>
+    <div class="section">
         If you have any questions, please contact:
-    </p>
+    </div>
 
-    <p>
-        <strong>
-            <a href="mailto:support@napptechlabs.com">
-                support@napptechlabs.com
-            </a>
-        </strong>
-    </p>
+    <div class="value">
+        support@napptechlabs.com
+    </div>
+
+</div>
 
 </body>
 </html>
